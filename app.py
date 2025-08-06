@@ -35,3 +35,7 @@ if __name__ == '__main__':
 @app.route("/", methods=["GET", "HEAD"])
 def home():
     return "API de crédito operativa", 200
+
+@app.route("/calcular-cuota", methods=["GET"])
+def calcular_info():
+    return "Usa POST para calcular la cuota", 200
