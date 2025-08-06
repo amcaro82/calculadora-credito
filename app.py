@@ -14,7 +14,7 @@ def calcular_cuota():
         tasa = float(data.get('tasa', 0.02))
 
         if monto <= 0 or ingreso <= 0 or plazo <= 0 or tasa <= 0:
-            return jsonify({'error': 'Todos los valoresotes deben ser mayores que cero'}), 400
+            return jsonify({'error': 'Todos los valores deben ser mayores que cero'}), 400
 
         cuota = (monto * tasa) / (1 - (1 + tasa) ** -plazo)
         porcentaje_ingreso = cuota / ingreso
